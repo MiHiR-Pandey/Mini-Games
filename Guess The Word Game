@@ -1,0 +1,24 @@
+import random
+
+words = ["apple", "banana", "grapes", "mango"]
+word = random.choice(words)
+
+guessed = "*" * len(word)
+print(guessed, "Guess the furit name")
+
+attempts = 3
+
+while attempts > 0:
+    player = input("Enter hidden word: ").lower()
+
+    if (player == word):
+        print("You Guess Right. The hidden word is", player)
+        break
+
+    else:
+        attempts -= 1
+        print("You guess wrong.")
+
+if (attempts == 0):
+     print("Game Over! the word was :",word)
+     exit()
