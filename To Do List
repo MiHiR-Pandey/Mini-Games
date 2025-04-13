@@ -1,0 +1,26 @@
+tasks = [] #empty tasks list
+
+while True:
+    print("\nWhat do you want to do?")
+    print("1. Add Task")
+    print("2. View all Tasks")
+    print("3. Exit")
+
+    choice = input("Enter Your choice: ")
+
+    if (choice == "1"):
+        task = input("Enter Your task: ")
+        tasks.append(task)
+        print("Task Added!")
+
+    elif (choice == "2"):
+        print("\nYour Tasks: ")
+        for i, task in enumerate(tasks, start=1):
+            print(f"{i}. {task}")
+
+    elif (choice == "3"):
+        print("Bye!")
+        break
+
+    else:
+        print("enter invalid!")
