@@ -14,6 +14,11 @@ num_to_string = {1 : "snake",
 
 # Player input
 player = input("Enter Your Choise: ").lower()
+if (player != string_to_num):
+    print("Invalid!")
+    exit()
+
+# Convert input to number
 new_input = string_to_num[player]
 
 # Display Choises
