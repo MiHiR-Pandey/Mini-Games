@@ -1,32 +1,33 @@
 import random
 
-# Random choice for computer
-computer = random.choice([1, 0, -1])
+# Computer Choise
+computer = random.choice([1,0,-1])
 
-# Dictionaries (keys in lowercase)
-string_to_number = {"snake": 1, "water": 0, "gun": -1}
-number_to_string = {1: "Snake", 0: "Water", -1: "Gun"}
+# Dictionaries
+string_to_num = {"snake" : 1,
+                 "water" : 0,
+                 "gun" : -1}
 
-# Input from user
-player_input = input("Enter your choice: ").lower()
+num_to_string = {1 : "snake",
+                 0 : "water",
+                 -1 : "gun"}
 
-# Check and convert input
-if player_input in string_to_number:
-    new = string_to_number[player_input]
+# Player input
+player = input("Enter Your Choise: ").lower()
+new_input = string_to_num[player]
+
+# Display Choises
+print(f"you choise {player}")
+print(f"computer choise {num_to_string[computer]}")
+
+# Game Logic
+if (new_input == computer):
+    print("Match Draw")
 else:
-    print("Invalid Input!")
-    exit()
 
-# Display choices
-print(f"You chose {number_to_string[new]}")
-print(f"Computer chose {number_to_string[computer]}")
-
-# Game logic
-if new == computer:
-    print("Match Draw!")
-elif (new == 1 and computer == 0) or \
-     (new == 0 and computer == -1) or \
-     (new == -1 and computer == 1):
-    print("You Win")
-else:
-    print("You Lose")
+    if (new_input == 1 and computer == 0) or \
+    (new_input == 0 and computer == -1) or\
+    (new_input == -1 and computer == 1):
+        print("You Win")
+    else:
+        print("You Lose")
