@@ -1,0 +1,17 @@
+import random
+
+computer = random.randint(1,10)
+
+player = int(input("enter number here: "))
+
+if (player == computer):
+    print("You guess right!")
+    exit()
+elif (player < computer):
+    print("You guess low")
+    print(f"computer guessed {computer}")
+    exit()
+elif (player > computer):
+    print("You guess high")
+    print(f"computer guessed {computer}")
+    exit()
